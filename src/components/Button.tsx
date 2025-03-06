@@ -1,16 +1,23 @@
 interface ButtonProps {
+  buttonEnabled: boolean;
   buttonText: string;
   buttonType: string;
   onClick: () => void;
 }
 
-const Button = ({ buttonText, buttonType, onClick }: ButtonProps) => {
+const Button = ({
+  buttonEnabled,
+  buttonText,
+  buttonType,
+  onClick,
+}: ButtonProps) => {
   return (
     <button
       className={"btn btn-" + buttonType}
       onClick={() => {
         onClick();
       }}
+      disabled={!buttonEnabled}
     >
       {buttonText}
     </button>
