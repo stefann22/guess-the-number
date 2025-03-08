@@ -27,6 +27,7 @@ function App() {
   if (gameStarted == 1) {
     return (
       <>
+        <div className="app-container">
         <h1>Guess the number</h1>
         <NumberInput
           numberLength={4}
@@ -47,11 +48,13 @@ function App() {
           buttonType="danger"
           onClick={handleButtonClick}
         ></Button>
+        </div>
       </>
     );
   } else {
     return (
       <>
+      <div className="app-container">
         <h1>Guess the number</h1>
         <Button
           buttonEnabled
@@ -59,6 +62,7 @@ function App() {
           buttonType="primary"
           onClick={handleButtonClick}
         ></Button>
+        </div>
       </>
     );
   }
